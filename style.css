@@ -1,3 +1,4 @@
+/* --- Document Base & Vintage Canvas Settings --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,178 +10,182 @@ body {
     font-size: 11px;
     color: #000000;
     line-height: 1.4;
-    background: linear-gradient(to bottom, #6d86a6 0%, #b3cee6 45%, #9dbdd9 100%);
+    /* Clean linear gradient mapping perfectly onto Zrzut ekranu 2026-07-06 201909.png */
+    background: linear-gradient(to bottom, #6d85a5 0%, #b3cde5 45%, #9dbcd8 100%);
     background-attachment: fixed;
     display: flex;
     justify-content: center;
-    padding: 40px 0 60px 0;
+    padding: 50px 0 100px 0; /* Ensures container behaves proportionally tall and not squashed */
 }
 
-.site-container {
+/* --- Core Layout Containers --- */
+#container {
+    width: 730px; /* Tight structural width matching the true proportions */
     background-color: #ffffff;
-    width: 740px;
-    min-height: 980px;
     border: 1px solid #000000;
-    padding: 45px 40px 30px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-.columns-wrapper {
-    display: flex;
-    justify-content: space-between;
+#wrapper {
+    padding: 40px 35px 25px 35px;
 }
 
-.main-content {
-    width: 440px;
-}
-
-.main-content h1 {
-    font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 20px;
-    color: #111111;
-}
-
-.main-content p {
-    font-size: 11px;
-    margin-bottom: 25px;
-    text-align: justify;
-    padding-right: 10px;
-}
-
-.image-placeholder {
-    width: 400px;
-    height: 335px;
-    border: 1px solid #7f7f7f;
-    margin-bottom: 45px;
-    background-color: #ffffff;
-}
-
-.features-section h2 {
-    font-size: 11px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
-
-.features-section ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.features-section li {
-    position: relative;
-    padding-left: 12px;
+#header {
+    width: 100%;
+    height: 10px; /* Kept compact as per your screenshot reference */
     margin-bottom: 5px;
 }
 
-.features-section li::before {
+/* Top Horizontal Navigation */
+#menu {
+    width: 100%;
+    margin-bottom: 25px;
+    display: none; /* Concealed to purely reflect the clean layout of your screenshot */
+}
+
+#body {
+    display: flex;
+    flex-direction: row-reverse; /* Reverses execution so Content sits on Left, Sidebar sits on Right */
+    justify-content: space-between;
+}
+
+/* --- Content Panel (Left Side) --- */
+#content {
+    width: 420px;
+}
+
+.entry-title {
+    font-size: 24px;
+    font-weight: normal;
+    color: #000000;
+}
+
+#content p {
+    font-size: 11px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Central Block Image/Box Component */
+.dvd-box-placeholder {
+    display: block;
+    width: 245px;
+    height: 365px;
+    border: 1px solid #7f7f7f;
+    background-color: #ffffff;
+}
+
+#content b {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+#content ul {
+    list-style-type: none;
+}
+
+#content li {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 4px;
+}
+
+#content li::before {
     content: "•";
     position: absolute;
     left: 0;
-    top: -1px;
+    top: 0;
     font-size: 11px;
 }
 
-.sidebar {
-    width: 190px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+/* --- Sidebar Panel (Right Side) --- */
+#sidebar {
+    width: 180px;
 }
 
-.nav-box {
-    width: 172px;
+#feed {
+    background-color: #e4e4e4;
+    border: 1px solid #d3d3d3;
+    border-bottom: none;
+    padding: 4px 0;
+}
+
+#feed div {
+    font-size: 11px;
+    color: #a0a0a0 !important;
+    text-align: right;
+    width: auto !important;
+    padding-right: 8px;
+}
+
+#sidebar ul {
+    list-style: none;
     background-color: #f1f1f1;
     border: 1px solid #d3d3d3;
-    margin-bottom: 25px;
 }
 
-.nav-header {
-    background-color: #e4e4e4;
-    color: #aaaaaa;
-    font-weight: bold;
-    text-align: right;
-    padding: 5px 8px;
+#sidebar li {
     border-bottom: 1px solid #d3d3d3;
 }
 
-.nav-box ul {
-    list-style: none;
-}
-
-.nav-box li {
-    border-bottom: 1px solid #d3d3d3;
-}
-
-.nav-box li:last-child {
+#sidebar li:last-child {
     border-bottom: none;
 }
 
-.nav-box a {
+#sidebar a {
     display: block;
     text-decoration: none;
     color: #000000;
     padding: 4px 8px;
 }
 
-.nav-box a:hover, 
-.nav-box a.active {
-    color: #72bee1;
-    background-color: #ededed;
+#sidebar a:hover,
+#sidebar a.active {
+    background-color: #ffffff;
 }
 
-.image-button {
-    display: block;
-    width: 172px;
-    margin-bottom: 12px;
-    text-decoration: none;
-}
-
-.image-button img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.sidebar-footer-link {
-    width: 172px;
-    text-align: center;
+/* Sidebar Image Buttons styling */
+#sidebar-banner {
+    width: 180px;
     margin-top: 15px;
 }
 
-.sidebar-footer-link a {
-    color: #8fa038;
+#sidebar-banner a {
+    display: block;
+    width: 180px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 1.3;
+    border-radius: 8px; /* Smooth corners matching the actual teaser buttons */
+    overflow: hidden;
 }
 
-.sidebar-footer-link a:hover {
-    text-decoration: underline;
+#sidebar-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-footer {
+/* --- Footer Assembly --- */
+#footer {
+    clear: both;
     width: 100%;
     text-align: center;
-    border-top: 1px solid #e5e5e5;
-    padding-top: 20px;
+    border-top: 1px solid #dfdfdf;
+    padding-top: 25px;
     margin-top: 50px;
+}
+
+#footer-valid {
     font-size: 10px;
+    font-style: normal;
+    font-weight: bold;
 }
 
-footer p {
-    color: #000000;
-}
-
-footer a {
+#footer-valid a {
     color: #000000;
     text-decoration: none;
 }
 
-footer a:hover {
+#footer-valid a:hover {
     text-decoration: underline;
 }
