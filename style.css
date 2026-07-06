@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #000000;
+    line-height: 1.4;
+    background: linear-gradient(to bottom, #6982a2 0%, #b2cbe3 50%, #9cbcd8 100%);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.site-container {
+    background-color: #ffffff;
+    width: 860px;
+    min-height: 950px;
+    border: 1px solid #000000;
+    padding: 35px 35px 20px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.columns-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content {
+    width: 500px;
+}
+
+.main-content h1 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    color: #222222;
+}
+
+.main-content p {
+    font-size: 11px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.image-placeholder {
+    width: 410px;
+    height: 310px;
+    border: 1px solid #7f7f7f;
+    margin-bottom: 35px;
+    background-color: #ffffff;
+}
+
+.features-section h2 {
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.features-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.features-section li {
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 4px;
+}
+
+.features-section li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    font-size: 12px;
+}
+
+.sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nav-box {
+    width: 175px;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    margin-bottom: 25px;
+}
+
+.nav-header {
+    background-color: #e4e4e4;
+    color: #a0a0a0;
+    font-weight: bold;
+    text-align: right;
+    padding: 4px 8px;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.nav-box ul {
+    list-style: none;
+}
+
+.nav-box li {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.nav-box li:last-child {
+    border-bottom: none;
+}
+
+.nav-box a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    padding: 4px 8px;
+}
+
+.nav-box a:hover, 
+.nav-box a.active {
+    background-color: #ffffff;
+}
+
+.promo-box {
+    width: 175px;
+    background: linear-gradient(to bottom, #f9f9f9, #ededed);
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
+}
+
+.promo-box h3 {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    color: #222222;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.box-art-placeholder {
+    width: 80px;
+    height: 110px;
+    background-color: #3a6080;
+    color: #fff;
+    margin: 0 auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+}
+
+.action-text {
+    font-style: italic;
+    font-weight: bold;
+    color: #333333;
+}
+
+.tractor-placeholder {
+    width: 110px;
+    height: 80px;
+    background-color: #2b577a;
+    color: #fff;
+    margin: 0 auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.promo-desc {
+    font-size: 10px;
+    font-style: italic;
+    color: #444444;
+    line-height: 1.3;
+}
+
+.facebook-placeholder {
+    width: 120px;
+    background-color: #3b5998;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 0;
+    margin: 5px auto;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar-footer-link {
+    width: 175px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sidebar-footer-link a {
+    color: #8fa038;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar-footer-link a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #dddddd;
+    padding-top: 20px;
+    margin-top: 40px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
