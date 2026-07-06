@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,19 +9,17 @@ body {
     font-size: 11px;
     color: #000000;
     line-height: 1.4;
-    /* Blue gradient matching background of Zrzut ekranu 2026-07-06 201909.png */
     background: linear-gradient(to bottom, #6d86a6 0%, #b3cee6 45%, #9dbdd9 100%);
     background-attachment: fixed;
     display: flex;
     justify-content: center;
-    padding: 40px 0 60px 0; /* Extra vertical padding so it's not too short */
+    padding: 40px 0 60px 0;
 }
 
-/* Main Container - Narrowed down to fix the "too wide" issue */
 .site-container {
     background-color: #ffffff;
-    width: 740px; 
-    min-height: 980px; /* Forces a taller aspect ratio */
+    width: 740px;
+    min-height: 980px;
     border: 1px solid #000000;
     padding: 45px 40px 30px 40px;
     display: flex;
@@ -35,7 +32,6 @@ body {
     justify-content: space-between;
 }
 
-/* --- Left Main Column --- */
 .main-content {
     width: 440px;
 }
@@ -54,7 +50,6 @@ body {
     padding-right: 10px;
 }
 
-/* Big center structural box placeholder */
 .image-placeholder {
     width: 400px;
     height: 335px;
@@ -89,15 +84,13 @@ body {
     font-size: 11px;
 }
 
-/* --- Right Sidebar Column --- */
 .sidebar {
     width: 190px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Aligns everything neatly to the right edge */
+    align-items: flex-end;
 }
 
-/* Navigation Box */
 .nav-box {
     width: 172px;
     background-color: #f1f1f1;
@@ -135,20 +128,15 @@ body {
 
 .nav-box a:hover, 
 .nav-box a.active {
-    background-color: #ffffff;
+    color: #72bee1;
+    background-color: #ededed;
 }
 
-/* Image Buttons styling */
 .image-button {
     display: block;
     width: 172px;
     margin-bottom: 12px;
     text-decoration: none;
-    transition: opacity 0.15s ease-in-out;
-}
-
-.image-button:hover {
-    opacity: 0.9;
 }
 
 .image-button img {
@@ -157,7 +145,6 @@ body {
     display: block;
 }
 
-/* External Link beneath the teaser images */
 .sidebar-footer-link {
     width: 172px;
     text-align: center;
@@ -176,7 +163,6 @@ body {
     text-decoration: underline;
 }
 
-/* --- Footer --- */
 footer {
     width: 100%;
     text-align: center;
