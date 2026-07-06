@@ -1,73 +1,81 @@
-/* --- Document Base & Vintage Canvas Settings --- */
+/* --- Global Resets & Document Framework --- */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    color: #000000;
-    line-height: 1.4;
-    /* Clean linear gradient mapping perfectly onto Zrzut ekranu 2026-07-06 201909.png */
-    background: linear-gradient(to bottom, #6d85a5 0%, #b3cde5 45%, #9dbcd8 100%);
+    /* Pure CSS CSS representation of original bgGradient.gif */
+    background: #bedaf2 linear-gradient(to bottom, #6d85a5 0%, #b3cde5 350px, #bedaf2 100%) no-repeat;
     background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    padding: 50px 0 100px 0; /* Ensures container behaves proportionally tall and not squashed */
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 62.5%; /* Sets base unit measurement to 10px */
+    color: #222222;
+    height: 100%;
+    overflow-x: hidden;
 }
 
-/* --- Core Layout Containers --- */
 #container {
-    width: 730px; /* Tight structural width matching the true proportions */
-    background-color: #ffffff;
+    width: 100%;
+    min-height: 1024px;
+}
+
+img {
+    border: 0;
+    display: block;
+}
+
+/* --- Outer Wrapper Framework (700px Strict Width) --- */
+#wrapper {
+    margin: 0 auto;
+    width: 700px;
+    background: #ffffff;
+    font-size: 1.2em; /* Resolves layout typography cleanly to ~12px */
+    position: relative;
+    top: 26px;
     border: 1px solid #000000;
 }
 
-#wrapper {
-    padding: 40px 35px 25px 35px;
-}
-
 #header {
-    width: 100%;
-    height: 10px; /* Kept compact as per your screenshot reference */
-    margin-bottom: 5px;
-}
-
-/* Top Horizontal Navigation */
-#menu {
-    width: 100%;
-    margin-bottom: 25px;
-    display: none; /* Concealed to purely reflect the clean layout of your screenshot */
+    height: 45px; /* Shrunk down to cleanly capture your screenshot structure */
 }
 
 #body {
-    display: flex;
-    flex-direction: row-reverse; /* Reverses execution so Content sits on Left, Sidebar sits on Right */
-    justify-content: space-between;
+    width: 100%;
 }
 
-/* --- Content Panel (Left Side) --- */
+/* --- Layout Core Content Panel (Left) --- */
 #content {
-    width: 420px;
+    float: left;
+    width: 500px;
+    background: #ffffff;
+    min-height: 600px;
+}
+
+.entry {
+    padding: 15px 25px;
+    text-align: justify;
+    line-height: 1.75em;
 }
 
 .entry-title {
-    font-size: 24px;
+    font-size: 1.9em;
     font-weight: normal;
-    color: #000000;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
 }
 
 #content p {
-    font-size: 11px;
-    text-align: justify;
-    margin-bottom: 15px;
+    margin-bottom: 1.75em;
 }
 
-/* Central Block Image/Box Component */
+/* Central DVD Outline Placeholder Container */
 .dvd-box-placeholder {
-    display: block;
     width: 245px;
     height: 365px;
     border: 1px solid #7f7f7f;
@@ -76,78 +84,72 @@ body {
 
 #content b {
     display: block;
-    font-size: 11px;
+    font-size: 1em;
     font-weight: bold;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 #content ul {
-    list-style-type: none;
+    margin-left: 15px;
+    list-style-type: square;
 }
 
 #content li {
-    position: relative;
-    padding-left: 10px;
     margin-bottom: 4px;
 }
 
-#content li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 11px;
-}
-
-/* --- Sidebar Panel (Right Side) --- */
+/* --- Layout Sidebar System Panel (Right) --- */
 #sidebar {
+    float: right;
     width: 180px;
+    background: #efefef;
+    margin-right: 10px;
 }
 
 #feed {
+    height: 25px;
     background-color: #e4e4e4;
     border: 1px solid #d3d3d3;
     border-bottom: none;
-    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
 }
 
-#feed div {
-    font-size: 11px;
-    color: #a0a0a0 !important;
-    text-align: right;
-    width: auto !important;
-    padding-right: 8px;
+.version-tag {
+    font-weight: bold;
+    color: #aaaaaa;
+    font-size: 0.95em;
 }
 
 #sidebar ul {
-    list-style: none;
-    background-color: #f1f1f1;
-    border: 1px solid #d3d3d3;
+    list-style-type: none;
 }
 
-#sidebar li {
-    border-bottom: 1px solid #d3d3d3;
-}
-
-#sidebar li:last-child {
-    border-bottom: none;
-}
-
-#sidebar a {
+#sidebar li a {
     display: block;
+    height: 22px;
+    line-height: 22px;
+    color: #222222;
+    padding-left: 8px;
     text-decoration: none;
-    color: #000000;
-    padding: 4px 8px;
+    border-bottom: 1px solid #dddddd;
 }
 
-#sidebar a:hover,
-#sidebar a.active {
-    background-color: #ffffff;
+#sidebar li a:hover {
+    background: #ffffff;
+    color: #222222;
 }
 
-/* Sidebar Image Buttons styling */
+#sidebar-bottom {
+    height: 10px;
+}
+
+/* Teaser Images Container area */
 #sidebar-banner {
     width: 180px;
+    background: #FFFFFF;
     margin-top: 15px;
 }
 
@@ -155,30 +157,27 @@ body {
     display: block;
     width: 180px;
     text-decoration: none;
-    border-radius: 8px; /* Smooth corners matching the actual teaser buttons */
+    border-radius: 6px;
     overflow: hidden;
 }
 
-#sidebar-banner img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* --- Footer Assembly --- */
+/* --- Structural Footer Clearing Area --- */
 #footer {
     clear: both;
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #dfdfdf;
-    padding-top: 25px;
-    margin-top: 50px;
+    background: #ffffff;
 }
 
 #footer-valid {
-    font-size: 10px;
-    font-style: normal;
+    margin: auto;
+    text-align: center;
+    height: 45px;
+    width: 680px;
+    background: #ffffff;
+    padding-top: 20px;
+    color: #000000;
+    font-size: 0.85em;
     font-weight: bold;
+    border-top: 1px solid #eeeeee;
 }
 
 #footer-valid a {
